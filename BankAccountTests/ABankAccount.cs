@@ -109,4 +109,81 @@ public class ABankAccount
         Assert.That(sut.NumberOfWithdrawals, Is.EqualTo(0));
         Assert.That(sut.MonthlyServiceCharge, Is.EqualTo(0));
     }
+
+    // Edge Cases
+    [Test]
+    public void ShouldNotChangeBalanceAfterDepositOfZeroAmount()
+    {
+        decimal initialBalance = 100m;
+        double annualInterestRate = 0.05;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+
+        sut.DepositAmount(0m);
+
+        Assert.That(sut.Balance, Is.EqualTo(100m));
+    }
+
+    [Test]
+    public void ShouldNotChangeBalanceAfterDepositOfNegativeAmount()
+    {
+        decimal initialBalance = 100m;
+        double annualInterestRate = 0.05;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+
+        sut.DepositAmount(-10m);
+
+        Assert.That(sut.Balance, Is.EqualTo(100m));
+    }
+
+    [Test]
+    public void ShouldNotChangeBalanceAfterWithdrawalOfZeroAmount()
+    {
+        decimal initialBalance = 100m;
+        double annualInterestRate = 0.05;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+
+        sut.WithdrawAmount(0m);
+
+        Assert.That(sut.Balance, Is.EqualTo(100m));
+    }
+
+    [Test]
+    public void ShouldNotChangeBalanceAfterWithdrawalOfNegativeAmount()
+    {
+        decimal initialBalance = 100m;
+        double annualInterestRate = 0.05;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+
+        sut.WithdrawAmount(-10m);
+
+        Assert.That(sut.Balance, Is.EqualTo(100m));
+    }
+
+    [Test]
+    public void ShouldCalculateMonthlyInterestAndUpdateBalanceForDifferentCombination()
+    {
+        decimal initialBalance = 200m;
+        double annualInterestRate = 0.24;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+
+        sut.UpdateBalanceMonthly();
+
+        Assert.That(sut.Balance, Is.EqualTo(204m));
+    }
+
+    [Test]
+    public void ShouldSubtractMonthlyServiceChargeCallUpdateBalanceMonthlyMethodAndResetNumberOfDepositsNumberOfWithdrawalsAndMonthlyServiceChargeForDifferentCombination()
+    {
+        decimal initialBalance = 201m;
+        double annualInterestRate = 0.24;
+        var sut = new BankAccount(initialBalance, annualInterestRate);
+        sut.MonthlyServiceCharge = 1m;
+
+        sut.MonthlyProcess();
+
+        Assert.That(sut.Balance, Is.EqualTo(204m));
+        Assert.That(sut.NumberOfDeposits, Is.EqualTo(0));
+        Assert.That(sut.NumberOfWithdrawals, Is.EqualTo(0));
+        Assert.That(sut.MonthlyServiceCharge, Is.EqualTo(0));
+    }
 }

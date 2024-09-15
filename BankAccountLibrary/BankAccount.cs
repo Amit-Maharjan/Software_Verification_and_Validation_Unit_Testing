@@ -16,7 +16,10 @@ public class BankAccount
 
     public virtual void DepositAmount(decimal depositAmount)
     {
-        Balance += depositAmount;
+        if (depositAmount > 0)
+        {
+            Balance += depositAmount;
+        }
     }
 
     public void IncrementNumberOfDeposits()
@@ -26,7 +29,10 @@ public class BankAccount
 
     public virtual void WithdrawAmount(decimal withdrawAmount)
     {
-        Balance -= withdrawAmount;
+        if (withdrawAmount > 0)
+        {
+            Balance -= withdrawAmount;
+        }
     }
 
     public void IncrementNumberOfWithdrawals()

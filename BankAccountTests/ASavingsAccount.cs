@@ -4,6 +4,7 @@ namespace BankAccountTests;
 
 class ASavingsAccount
 {
+    // Constructor
     [Test]
     public void ShouldSetBalanceAnnualInterestRateAndAccountStatusToActiveWhenConstructed()
     {
@@ -20,7 +21,7 @@ class ASavingsAccount
     [Test]
     public void ShouldSetBalanceAnnualInterestRateAndAccountStatusToInActiveWhenConstructed()
     {
-        decimal initialBalance = 25m;
+        decimal initialBalance = 20m;
         double annualInterestRate = 0.05;
 
         var sut = new SavingsAccount(initialBalance, annualInterestRate);
@@ -30,6 +31,7 @@ class ASavingsAccount
         Assert.That(sut.Status, Is.EqualTo(AccountStatus.Inactive));
     }
 
+    // Withdraw Method
     [Test]
     public void ShouldNotChangeBalanceAfterWithdrawalWhenInactive()
     {
@@ -54,6 +56,7 @@ class ASavingsAccount
         Assert.That(sut.Balance, Is.EqualTo(90m));
     }
 
+    // Deposit Method
     [Test]
     public void ShouldNotChangeStatusAfterDepositWhenResultantBalanceIsLessThan25()
     {
@@ -80,6 +83,7 @@ class ASavingsAccount
         Assert.That(sut.Status, Is.EqualTo(AccountStatus.Active));
     }
 
+    // Monthly Process Method
     [Test]
     public void ShouldAddMonthlyServiceChargeIfNumberOfWithdrawsIsGreaterThan4AndChangeAccountStatusToInactiveWhenResultantBalanceIsLessThan25()
     {
@@ -118,5 +122,50 @@ class ASavingsAccount
         Assert.That(sut.NumberOfWithdrawals, Is.EqualTo(0));
         Assert.That(sut.MonthlyServiceCharge, Is.EqualTo(0));
         Assert.That(sut.Status, Is.EqualTo(AccountStatus.Active));
+    }
+
+    // Edge Cases
+    [Test]
+    public void ShouldSetBalanceAnnualInterestRateAndAccountStatusToInActiveWhenConstructedForAmountEquals25()
+    {
+        decimal initialBalance = 25m;
+        double annualInterestRate = 0.05;
+
+        var sut = new SavingsAccount(initialBalance, annualInterestRate);
+
+        Assert.That(sut.Balance, Is.EqualTo(initialBalance));
+        Assert.That(sut.AnnualInterestRate, Is.EqualTo(annualInterestRate));
+        Assert.That(sut.Status, Is.EqualTo(AccountStatus.Inactive));
+    }
+
+    [Test]
+    public void ShouldNotChangeStatusAfterDepositWhenResultantBalanceIs25()
+    {
+        decimal initialBalance = 15m;
+        double annualInterestRate = 0.05;
+        var sut = new SavingsAccount(initialBalance, annualInterestRate);
+
+        sut.DepositAmount(10m);
+
+        Assert.That(sut.Balance, Is.EqualTo(25m));
+        Assert.That(sut.Status, Is.EqualTo(AccountStatus.Inactive));
+    }
+
+    [Test]
+    public void ShouldAddMonthlyServiceChargeIfNumberOfWithdrawsIsGreaterThan4AndChangeAccountStatusToInactiveWhenResultantBalanceIs25()
+    {
+        decimal initialBalance = 25m;
+        double annualInterestRate = 0;
+        var sut = new SavingsAccount(initialBalance, annualInterestRate);
+        sut.IncrementNumberOfWithdrawals();
+        sut.MonthlyServiceCharge = 0m;
+
+        sut.MonthlyProcess();
+
+        Assert.That(sut.Balance, Is.EqualTo(25m));
+        Assert.That(sut.NumberOfDeposits, Is.EqualTo(0));
+        Assert.That(sut.NumberOfWithdrawals, Is.EqualTo(0));
+        Assert.That(sut.MonthlyServiceCharge, Is.EqualTo(0));
+        Assert.That(sut.Status, Is.EqualTo(AccountStatus.Inactive));
     }
 }
