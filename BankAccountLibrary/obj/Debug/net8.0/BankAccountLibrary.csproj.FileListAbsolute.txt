@@ -1,0 +1,22 @@
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.deps.json
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.pdb
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.AssemblyInfoInputs.cache
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.AssemblyInfo.cs
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.csproj.CoreCompileInputs.cache
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\refint\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.pdb
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Lab 1\BankAccountLibrary\obj\Debug\net8.0\ref\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.deps.json
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\bin\Debug\net8.0\BankAccountLibrary.pdb
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.AssemblyInfoInputs.cache
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.AssemblyInfo.cs
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.csproj.CoreCompileInputs.cache
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\refint\BankAccountLibrary.dll
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\BankAccountLibrary.pdb
+C:\Users\MAHARJANA\Desktop\ETSU\3rd Semester\Software V&V\Unit Testing\Lab 1\BankAccountLibrary\obj\Debug\net8.0\ref\BankAccountLibrary.dll
