@@ -14,7 +14,7 @@ public class BankAccount
         AnnualInterestRate = annualInterestRate;
     }
 
-    public void DepositAmount(decimal depositAmount)
+    public virtual void DepositAmount(decimal depositAmount)
     {
         Balance += depositAmount;
     }
@@ -24,7 +24,7 @@ public class BankAccount
         NumberOfDeposits++;
     }
 
-    public void WithdrawAmount(decimal withdrawAmount)
+    public virtual void WithdrawAmount(decimal withdrawAmount)
     {
         Balance -= withdrawAmount;
     }
@@ -41,7 +41,7 @@ public class BankAccount
         Balance += monthlyInterest;
     }
 
-    public void MonthlyProcess()
+    public virtual void MonthlyProcess()
     {
         Balance -= MonthlyServiceCharge;
         UpdateBalanceMonthly();
